@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,7 +43,9 @@ namespace Cash_machine
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
-
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
 
         private void Transfer_Click(object sender, RoutedEventArgs e)

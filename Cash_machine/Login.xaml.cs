@@ -44,8 +44,8 @@ namespace Cash_machine
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 if (count == 1)
                 {
-                    MainWindow dashboard = new MainWindow();
-                    dashboard.Show();
+                    MainWindow Cash_mainmenu = new MainWindow();
+                    Cash_mainmenu.Show();
                     this.Close();
                 }
                 else
