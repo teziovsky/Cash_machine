@@ -1,0 +1,13 @@
+﻿<Window x:Class="Cash_machine.Payment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cash_machine"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Wypłata gotówki" Height="350" Width="400" Background="#2e3137">
+    <StackPanel Margin="70">
+        <Label Content="MENU WYPŁAT" Foreground="White" HorizontalAlignment="center" />
+    </StackPanel>
+</Window>

@@ -28,56 +28,25 @@ namespace Cash_machine
             InitializeComponent();
         }
 
-        MySqlConnection conn = new MySqlConnection(@"server=localhost;user=root;port=3306;database=Cash_machine;password=;");
-
-        private void ConnectToSql()
-        {
-            try
-            {
-                if (conn.State == ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void Payment_Click(object sender, RoutedEventArgs e)
         {
-
+            Payment payment = new Payment();
+            payment.Show();
+            this.Close();
         }
 
         private void Available_Click(object sender, RoutedEventArgs e)
         {
-            ConnectToSql();
-            try
-            {
-                String query = $"SELECT acc_balance FROM cards WHERE Card_nr={Login.CurrentCardNr}";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                Acc_balance balance = new Acc_balance();
-
-                balance.balance.Text = String.Format("{0:0,0.00}", cmd.ExecuteScalar());
-
-                balance.Show();
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            Acc_balance acc_balance = new Acc_balance();
+            acc_balance.Show();
+            this.Close();
         }
 
         private void ChangePassword_Click(object sender, RoutedEventArgs e)
         {
-
+            ChangePass changepass = new ChangePass();
+            changepass.Show();
+            this.Close();
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -89,7 +58,9 @@ namespace Cash_machine
 
         private void Transfer_Click(object sender, RoutedEventArgs e)
         {
-
+            Transfer transfer = new Transfer();
+            transfer.Show();
+            this.Close();
         }
     }
 }
