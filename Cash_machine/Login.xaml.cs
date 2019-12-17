@@ -22,6 +22,8 @@ namespace Cash_machine
     /// </summary>
     public partial class Login : Window
     {
+        public static string CurrentCardNr;
+
         public Login()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace Cash_machine
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 if (count == 1)
                 {
+                    CurrentCardNr = textCardnumber.Text;
                     MainWindow Cash_mainmenu = new MainWindow();
                     Cash_mainmenu.Show();
                     this.Close();
