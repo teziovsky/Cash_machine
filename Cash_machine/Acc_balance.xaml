@@ -8,10 +8,11 @@
         mc:Ignorable="d"
         Title="Stan konta" Height="350" Width="400" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
-        <StackPanel Margin="40">
-            <Label Content="Twój stan konta wynosi:" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="0 20 0 10"/>
-            <TextBox Name="balance" Background="#545d6a" Foreground="white" FontSize="18" IsReadOnly="true" HorizontalAlignment="Center" MinWidth="190" TextAlignment="Center"/>
-            <Button Name="Back" Click="Back_Click" Content="Powrót" Margin="50 20 50 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
+        <StackPanel Margin="20">
+            <Label Content="Twój stan konta wynosi:" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <TextBox Name="balance" Background="#545d6a" Foreground="white" FontSize="18" IsReadOnly="true" Width="335" TextAlignment="Center" Margin="0 20 0 0"/>
+            <Button Name="Back" Click="Back_Click" Content="Powrót" Margin="70 122 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
         </StackPanel>
     </Border>
 </Window>

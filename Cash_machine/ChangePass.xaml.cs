@@ -96,5 +96,12 @@ namespace Cash_machine
                 ChangePass_query();
             }
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
     }
 }

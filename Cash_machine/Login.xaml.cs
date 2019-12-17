@@ -68,7 +68,7 @@ namespace Cash_machine
 
         private void Info_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Nr Karty: 123456789 Pin: 1234" + "\n" + "Nr Karty: 987654321 Pin: 4321", "Przykładowe dane logowania", MessageBoxButton.OK);
+            MessageBox.Show("Nr_Karty: 123456789 Pin: 1234" + "\n" + "Nr_Karty: 987654321 Pin: 4321", "Przykładowe dane logowania", MessageBoxButton.OK);
         }
     }
 }

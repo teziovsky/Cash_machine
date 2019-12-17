@@ -14,8 +14,8 @@
             <TextBox Name="textCardnumber" Background="#545d6a" Foreground="white" FontSize="18"/>
             <Label Content="PIN Karty" Foreground="White" />
             <PasswordBox Name="textPassword" Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Button Name="Submit" Click="Submit_Click" Content="Zaloguj" Margin="70 10 70 5" Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Button Name="info" Click="Info_Click" Content="?" Margin="295 20 5 0" Background="#545d6a" Foreground="white" FontSize="14"/>
+            <Button Name="Submit" Click="Submit_Click" Content="Zaloguj" Margin="70 20 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="info" Click="Info_Click" Content="?" Margin="295 -28 0 0" Background="#545d6a" Foreground="white" FontSize="14"/>
         </StackPanel>
     </Border>
 </Window>
