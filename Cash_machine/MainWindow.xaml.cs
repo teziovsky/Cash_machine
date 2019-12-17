@@ -24,5 +24,30 @@ namespace Cash_machine
         {
             InitializeComponent();
         }
+
+        private void Payment_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Available_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Transfer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
