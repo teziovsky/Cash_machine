@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Cash_machine"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Bankomat" Height="350" Width="400" Background="#2e3137">
+        Title="Okno bankomatu" Height="350" Width="400" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
         <StackPanel Margin="20">
             <Label Content="Wybierz rodzaj operacji" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>

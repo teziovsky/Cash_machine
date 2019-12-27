@@ -22,17 +22,15 @@ namespace Cash_machine
     /// </summary>
     public partial class Acc_balance : Window
     {
-        MySqlConnection conn = new MySqlConnection(@"server=localhost;user=root;port=3306;database=Cash_machine;password=;");
-
         public Acc_balance()
         {
             InitializeComponent();
-            Acc_balance_connection();
             Acc_balance_query();
         }
 
-        private void Acc_balance_connection()
+        private void Acc_balance_query()
         {
+            MySqlConnection conn = new MySqlConnection(@"server=localhost;user=root;port=3306;database=Cash_machine;password=;");
             try
             {
                 if (conn.State == ConnectionState.Closed)
@@ -44,10 +42,6 @@ namespace Cash_machine
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void Acc_balance_query()
-        {
             try
             {
                 String query = $"SELECT acc_balance FROM cards WHERE Card_nr={Login.CurrentCardNr}";

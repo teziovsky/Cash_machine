@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Cash_machine"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Zmiana kodu PIN" Height="350" Width="400" Background="#2e3137">
+        Title="Okno zmiany kodu PIN" Height="350" Width="400" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
         <StackPanel Margin="20">
             <Label Content="Zmiana kodu PIN:" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 10"/>

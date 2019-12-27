@@ -38,6 +38,13 @@ namespace Cash_machine
                 {
                     conn.Open();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
                 String query = "SELECT COUNT(1) FROM cards WHERE Card_nr=@Cardnumber AND Pass=@Password";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.CommandType = CommandType.Text;

@@ -8,7 +8,7 @@
         Title="Okno Logowania" Height="350" Width="400" WindowStyle="ThreeDBorderWindow" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
         <StackPanel Margin="20">
-            <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Label Content="Logowanie" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
             <Label Content="Numer karty" Foreground="White" />
             <TextBox Name="textCardnumber" Background="#545d6a" Foreground="white" FontSize="18"/>

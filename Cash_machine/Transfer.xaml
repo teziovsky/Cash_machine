@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Cash_machine"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Przelew gotówki" Height="350" Width="400" Background="#2e3137">
+        Title="Okno przelewu gotówki" Height="350" Width="400" Background="#2e3137">
     <StackPanel Margin="70">
         <Label Content="MENU PRZELEWÓW" Foreground="White" HorizontalAlignment="center" />
     </StackPanel>

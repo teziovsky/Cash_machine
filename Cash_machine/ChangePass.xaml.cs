@@ -21,12 +21,9 @@ namespace Cash_machine
     /// </summary>
     public partial class ChangePass : Window
     {
-        MySqlConnection conn = new MySqlConnection(@"server=localhost;user=root;port=3306;database=Cash_machine;password=;");
-
         public ChangePass()
         {
             InitializeComponent();
-            ChangePass_connection();
         }
 
         private bool IsAllDigits(string s)
@@ -34,8 +31,9 @@ namespace Cash_machine
             return s.All(char.IsDigit);
         }
 
-        private void ChangePass_connection()
+        private void ChangePass_query()
         {
+            MySqlConnection conn = new MySqlConnection(@"server=localhost;user=root;port=3306;database=Cash_machine;password=;");
             try
             {
                 if (conn.State == ConnectionState.Closed)
@@ -47,10 +45,6 @@ namespace Cash_machine
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void ChangePass_query()
-        {
             try
             {
                 String query = $"SELECT Pass FROM cards WHERE Card_nr = {Login.CurrentCardNr}";
@@ -66,15 +60,15 @@ namespace Cash_machine
                     MySqlCommand cmd1 = new MySqlCommand(query1, conn);
                     cmd1.ExecuteScalar();
                     MessageBox.Show("Pomyślnie zmieniono kod PIN!", "SUKCES", MessageBoxButton.OK);
-                    conn.Close();
-                    MainWindow main = new MainWindow();
-                    main.Show();
-                    this.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
 
@@ -94,6 +88,9 @@ namespace Cash_machine
             }
             else{
                 ChangePass_query();
+                MainWindow main = new MainWindow();
+                main.Show();
+                this.Close();
             }
         }
 
