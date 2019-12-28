@@ -46,7 +46,7 @@ namespace Cash_machine
             {
                 String query = $"SELECT acc_balance FROM cards WHERE Card_nr={Login.CurrentCardNr}";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                balance.Text = String.Format("{0:0,0.00}", cmd.ExecuteScalar());
+                balance.Text = String.Format("{0:0,0 zł}", cmd.ExecuteScalar());
             }
             catch (Exception ex)
             {
