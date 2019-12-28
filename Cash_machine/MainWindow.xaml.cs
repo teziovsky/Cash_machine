@@ -62,5 +62,12 @@ namespace Cash_machine
             transfer.Show();
             this.Close();
         }
+
+        private void Withdrawal_Click(object sender, RoutedEventArgs e)
+        {
+            Withdrawal withdrawal = new Withdrawal();
+            withdrawal.Show();
+            this.Close();
+        }
     }
 }

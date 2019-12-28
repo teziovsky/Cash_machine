@@ -11,11 +11,12 @@
         <StackPanel Margin="20">
             <Label Content="Wybierz rodzaj operacji" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
-            <Button Name="Available" Click="Available_Click" Content="Stan konta" Margin="70 20 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Button Name="Payment" Click="Payment_Click" Content="Wypłata" Margin="70 10 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Button Name="Transfer" Click="Transfer_Click" Content="Przelew" Margin="70 10 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Button Name="ChangePassword" Click="ChangePassword_Click" Content="Zmiana kodu PIN" Margin="70 10 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Button Name="Logout" Click="Logout_Click" Content="Wyloguj" Margin="70 10 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Available" Click="Available_Click" Content="Stan konta" Margin="70 8 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Payment" Click="Payment_Click" Content="Wpłata" Margin="70 5 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Withdrawal" Click="Withdrawal_Click" Content="Wypłata" Margin="70 5 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Transfer" Click="Transfer_Click" Content="Przelew" Margin="70 5 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="ChangePassword" Click="ChangePassword_Click" Content="Zmiana kodu PIN" Margin="70 5 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Logout" Click="Logout_Click" Content="Wyloguj" Margin="70 5 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
         </StackPanel>
     </Border>
 </Window>

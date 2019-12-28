@@ -1,4 +1,4 @@
-﻿<Window x:Class="Cash_machine.Payment"
+﻿<Window x:Class="Cash_machine.Withdrawal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:Cash_machine"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Okno wpłaty gotówki" Height="350" Width="400" Background="#2e3137">
+        Title="Okno wypłaty gotówki" Height="350" Width="400" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
         <StackPanel Margin="20">
-            <Label Content="Wpłata" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+            <Label Content="Wypłata" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 10"/>
             <Separator></Separator>
-            <Label Content="Wprowadź kwotę do wpłaty" Foreground="White" Margin="0 10 0 0"/>
-            <TextBox Name="textPaymentnumber" Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Button Name="Paysubmit" Click="Paysubmit_Click" Content="Wpłać" Margin="70 50 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Label Content="Wprowadź kwotę do wypłaty" Foreground="White" Margin="0 10 0 0"/>
+            <TextBox Name="textWithdrawalnumber" Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Withdrawalsubmit" Click="Withdrawalsubmit_Click" Content="Wypłać" Margin="70 50 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
             <Button Name="Back" Click="Back_Click" Content="Powrót" Margin="70 5 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
         </StackPanel>
     </Border>

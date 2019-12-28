@@ -62,6 +62,9 @@
     <Compile Include="Transfer.xaml.cs">
       <DependentUpon>Transfer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Withdrawal.xaml.cs">
+      <DependentUpon>Withdrawal.xaml</DependentUpon>
+    </Compile>
     <Page Include="Acc_balance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Transfer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Withdrawal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

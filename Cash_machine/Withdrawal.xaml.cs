@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace Cash_machine
 {
     /// <summary>
-    /// Logika interakcji dla klasy Payment.xaml
+    /// Logika interakcji dla klasy Withdrawal.xaml
     /// </summary>
-    public partial class Payment : Window
+    public partial class Withdrawal : Window
     {
-        public Payment()
+        public Withdrawal()
         {
             InitializeComponent();
         }
@@ -31,9 +31,9 @@ namespace Cash_machine
             return s.All(char.IsDigit);
         }
 
-        private void Paysubmit_Click(object sender, RoutedEventArgs e)
+        private void Withdrawalsubmit_Click(object sender, RoutedEventArgs e)
         {
-            var new1 = IsAllDigits(textPaymentnumber.Text);
+            var new1 = IsAllDigits(textWithdrawalnumber.Text);
 
             MySqlConnection conn = new MySqlConnection(@"server=localhost;user=root;port=3306;database=Cash_machine;password=;");
             try
@@ -52,10 +52,10 @@ namespace Cash_machine
                 String query = $"SELECT acc_balance FROM cards WHERE Card_nr={Login.CurrentCardNr}";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 int amount = Convert.ToInt32(cmd.ExecuteScalar());
-                int.TryParse(textPaymentnumber.Text, out int amount2);
-                if (amount2 > 10000)
+                int.TryParse(textWithdrawalnumber.Text, out int amount2);
+                if (amount2 > amount)
                 {
-                    MessageBox.Show("Maksymalnie jednorazowo można wpłacić 10 000 zł...", "ERROR", MessageBoxButton.OK);
+                    MessageBox.Show("Podana kwota jest wyższa niż twój stan konta...", "ERROR", MessageBoxButton.OK);
                 }
                 else if (amount2 < 0)
                 {
@@ -67,11 +67,11 @@ namespace Cash_machine
                 }
                 else
                 {
-                    int amount3 = amount + amount2;
+                    int amount3 = amount - amount2;
                     String query1 = $"UPDATE cards SET acc_balance = {amount3} WHERE Card_nr = {Login.CurrentCardNr}";
                     MySqlCommand cmd1 = new MySqlCommand(query1, conn);
                     cmd1.ExecuteScalar();
-                    MessageBox.Show($"Pomyślnie wpłacono {amount2} zł.", "SUKCES", MessageBoxButton.OK);
+                    MessageBox.Show($"Pomyślnie wypłacono {amount2} zł.", "SUKCES", MessageBoxButton.OK);
                     MainWindow main = new MainWindow();
                     main.Show();
                     this.Close();
