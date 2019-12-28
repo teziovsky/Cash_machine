@@ -29,8 +29,15 @@ namespace Cash_machine
             InitializeComponent();
         }
 
+        private bool IsAllDigits(string s)
+        {
+            return s.All(char.IsDigit);
+        }
+
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            var new1 = IsAllDigits(textCardnumber.Text);
+            var new2 = IsAllDigits(textPassword.Password);
             MySqlConnection conn = new MySqlConnection(@"server=localhost;user=root;port=3306;database=Cash_machine;password=;");
             try
             {
@@ -45,22 +52,19 @@ namespace Cash_machine
             }
             try
             {
-                String query = "SELECT COUNT(1) FROM cards WHERE Card_nr=@Cardnumber AND Pass=@Password";
+                String query = $"SELECT COUNT(1) FROM cards WHERE Card_nr={textCardnumber.Text} AND Pass={textPassword.Password}";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Cardnumber", textCardnumber.Text);
-                cmd.Parameters.AddWithValue("@Password", textPassword.Password);
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
-                if (count == 1)
+                if (count != 1 || new1 == false || new2 == false)
+                {
+                    MessageBox.Show("Błędne dane logowania. Spróbuj ponownie...", "ERROR", MessageBoxButton.OK);
+                }
+                else
                 {
                     CurrentCardNr = textCardnumber.Text;
                     MainWindow Cash_mainmenu = new MainWindow();
                     Cash_mainmenu.Show();
                     this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Błędne dane logowania. Spróbuj ponownie...", "ERROR", MessageBoxButton.OK);
                 }
             }
             catch (Exception ex)

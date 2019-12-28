@@ -9,7 +9,7 @@
         Title="Okno bankomatu" Height="350" Width="400" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
         <StackPanel Margin="20">
-            <Label Content="Wybierz rodzaj operacji" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Label Content="Wybierz rodzaj operacji:" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
             <Button Name="Available" Click="Available_Click" Content="Stan konta" Margin="70 8 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>
             <Button Name="Payment" Click="Payment_Click" Content="Wpłata" Margin="70 5 70 0 " Background="#545d6a" Foreground="white" FontSize="18"/>

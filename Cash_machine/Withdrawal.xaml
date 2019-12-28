@@ -9,9 +9,9 @@
         Title="Okno wypłaty gotówki" Height="350" Width="400" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
         <StackPanel Margin="20">
-            <Label Content="Wypłata" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+            <Label Content="Wypłata:" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 10"/>
             <Separator></Separator>
-            <Label Content="Wprowadź kwotę do wypłaty" Foreground="White" Margin="0 10 0 0"/>
+            <Label Content="Wprowadź kwotę do wypłaty:" Foreground="White" Margin="0 10 0 0"/>
             <TextBox Name="textWithdrawalnumber" Background="#545d6a" Foreground="white" FontSize="18"/>
             <Button Name="Withdrawalsubmit" Click="Withdrawalsubmit_Click" Content="Wypłać" Margin="70 50 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
             <Button Name="Back" Click="Back_Click" Content="Powrót" Margin="70 5 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>

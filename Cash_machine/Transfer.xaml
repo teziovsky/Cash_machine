@@ -7,7 +7,16 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Okno przelewu gotówki" Height="350" Width="400" Background="#2e3137">
-    <StackPanel Margin="70">
-        <Label Content="MENU PRZELEWÓW" Foreground="White" HorizontalAlignment="center" />
-    </StackPanel>
+    <Border Background="#2e3137" Margin="0" Padding="10">
+        <StackPanel Margin="20">
+            <Label Content="Przelew:" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+            <Separator></Separator>
+            <Label Content="Numer karty odbiorcy:" Foreground="White" Margin="0 10 0 0"/>
+            <TextBox Name="textReceivercardnr" Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Label Content="Kwota przelewu:" Foreground="White" />
+            <TextBox Name="textTransfervalue" Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Transfervalue" Click="Transfervalue_Click" Content="Wyślij" Margin="70 15 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
+            <Button Name="Back" Click="Back_Click" Content="Powrót" Margin="70 5 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
+        </StackPanel>
+    </Border>
 </Window>

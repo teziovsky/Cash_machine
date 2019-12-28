@@ -8,11 +8,11 @@
         Title="Okno Logowania" Height="350" Width="400" WindowStyle="ThreeDBorderWindow" Background="#2e3137">
     <Border Background="#2e3137" Margin="0" Padding="10">
         <StackPanel Margin="20">
-            <Label Content="Logowanie" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Label Content="Logowanie:" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
-            <Label Content="Numer karty" Foreground="White" />
+            <Label Content="Numer karty:" Foreground="White" />
             <TextBox Name="textCardnumber" Background="#545d6a" Foreground="white" FontSize="18"/>
-            <Label Content="PIN Karty" Foreground="White" />
+            <Label Content="PIN Karty:" Foreground="White" />
             <PasswordBox Name="textPassword" Background="#545d6a" Foreground="white" FontSize="18"/>
             <Button Name="Submit" Click="Submit_Click" Content="Zaloguj" Margin="70 20 70 0" Background="#545d6a" Foreground="white" FontSize="18"/>
             <Button Name="info" Click="Info_Click" Content="?" Margin="295 -28 0 0" Background="#545d6a" Foreground="white" FontSize="14"/>
