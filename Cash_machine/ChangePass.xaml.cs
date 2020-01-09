@@ -84,7 +84,7 @@ namespace Cash_machine
                 MessageBox.Show("Kod PIN musi się składać z 4 cyfr. Wpisz poprawne kody PIN...", "ERROR", MessageBoxButton.OK);
             }
             else if (new1 == false || new2 == false) {
-                MessageBox.Show("Twoj kody PIN zawierają litery. Kod PIN musi się składać wyłącznie z cyfr....", "ERROR", MessageBoxButton.OK);
+                MessageBox.Show("Twoje kody PIN zawierają litery. Kod PIN musi się składać wyłącznie z cyfr...", "ERROR", MessageBoxButton.OK);
             }
             else{
                 ChangePass_query();
