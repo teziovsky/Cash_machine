@@ -78,7 +78,7 @@ namespace Cash_machine
             var new2 = IsAllDigits(textNew1Password.Password.ToString());
 
             if (textNewPassword.Password != textNew1Password.Password){
-                MessageBox.Show("Twoja kody PIN różnią się. Wpisz takie same kody PIN...", "ERROR", MessageBoxButton.OK);
+                MessageBox.Show("Twoje kody PIN różnią się. Wpisz takie same kody PIN...", "ERROR", MessageBoxButton.OK);
             }
             else if (textNewPassword.Password.Length != 4 || textNew1Password.Password.Length != 4){
                 MessageBox.Show("Kod PIN musi się składać z 4 cyfr. Wpisz poprawne kody PIN...", "ERROR", MessageBoxButton.OK);
